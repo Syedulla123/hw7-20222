@@ -8,10 +8,10 @@ window.addEventListener("load", function() {
 // 	console.log("Play Video");
 // });
 
-var video = document.querySelector("#player1");
+var video = document.querySelector("#video");
 
 function getVid() {
-	video = document.querySelector("#player1");
+	video = document.querySelector("#video");
 }
 
 
@@ -60,10 +60,10 @@ function mute() {
 }
 
 function changeVolume() {
-	console.log(volumeSlider.value);
+	console.log(volume.value);
 	var slider_val = document.querySelector('#volume').innerHTML; 
 	// update the slider value
-	slider_val = volumeSlider.value;
+	slider_val = volume.value;
 	// update the new video volume 
 	video.volume = slider_val / 100;
 	// update html div
