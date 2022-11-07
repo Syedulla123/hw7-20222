@@ -60,10 +60,10 @@ function mute() {
 }
 
 function changeVolume() {
-	console.log(volume.value);
+	console.log(Volume.value);
 	var slider_val = document.querySelector('#volume').innerHTML; 
 	// update the slider value
-	slider_val = volume.value;
+	slider_val = Volume.value;
 	// update the new video volume 
 	video.volume = slider_val / 100;
 	// update html div
