@@ -8,10 +8,10 @@ window.addEventListener("load", function() {
 // 	console.log("Play Video");
 // });
 
-var video = document.querySelector("#video");
+var video = document.querySelector("#player1");
 
 function getVid() {
-	video = document.querySelector("#video");
+	video = document.querySelector("#player1");
 }
 
 
