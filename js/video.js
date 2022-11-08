@@ -1,3 +1,4 @@
+var video;
 
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")
@@ -7,11 +8,12 @@ window.addEventListener("load", function() {
 // 	console.log("Play Video");
 // });
 
-var video = document.querySelector("#player1");
+var video = document.querySelector("#video");
 
 function getVid() {
-	video = document.querySelector("#player1");
+	video = document.querySelector("#video");
 }
+
 
 function playVid() {
 	console.log("Play Video");
@@ -58,17 +60,17 @@ function mute() {
 }
 
 function changeVolume() {
-	console.log(slider.value);
+	console.log(volume.value);
 	var slider_val = document.querySelector('#volume').innerHTML; 
 	// update the slider value
-	slider_val = slider.value;
+	slider_val = volume.value;
 	// update the new video volume 
 	video.volume = slider_val / 100;
 	// update html div
 	document.querySelector('#volume').innerHTML = slider_val + '%';
 }
 
-function gray() { 
+function styled() { 
 	video.classList.add("grayscale");
 	console.log("In grayscale");
 }
