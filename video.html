@@ -5,16 +5,14 @@
 	<title>JavaScript Video Controls</title>
 	<script src="js/video.js" type="text/javascript"></script>
 </head>
-<body> 
+<body onload = "getVid()">  
 <main>
 	<h1>JavaScript Video Controls</h1>
-	<div class = "options">
-		<button  id = "play">Play Video</button>
-		<button  id = "pause">Pause Video</button>
-		<button  id = "slower">Slow Down</button>
-		<button  id = "faster">Speed Up</button>
-		<button  id = "skip">Skip Ahead</button>
-	</div>
+		<button onclick="playVid()" type="button" class = "play">Play Video</button>
+		<button onclick="pauseVid()" type="button" class = "pause">Pause Video</button><br>
+		<button onclick="slowerSpeed()" type="button">Slow Down</button>
+		<button onclick="fasterSpeed()" type="button">Speed Up</button><br>
+		<button onclick="skipAhead()" type="button">Skip Ahead</button><br>
 
 	<figure>
 
