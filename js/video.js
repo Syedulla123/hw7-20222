@@ -68,7 +68,7 @@ function changeVolume() {
 	document.querySelector('#volume').innerHTML = slider_val + '%';
 }
 
-function styled() { 
+function gray() { 
 	video.classList.add("grayscale");
 	console.log("In grayscale");
 }
