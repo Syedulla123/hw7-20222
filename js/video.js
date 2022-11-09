@@ -1,16 +1,13 @@
+var video;
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
 	console.log("Good job opening the window")
+
 });
 
-// document.querySelector("#play").addEventListener("click", function() {
-// 	console.log("Play Video");
-// });
-
-var video = document.querySelector("#player1");
-
-function getVid() {
-	video = document.querySelector("#player1");
+document.querySelector("#play").addEventListener("click", playVid)
+function playVid() {
+	console.log("Play Video")
 }
 
 function playVid() {
@@ -18,9 +15,19 @@ function playVid() {
 	video.play();
 }
 
+document.querySelector("#pause").addEventListener("click", pauseVid)
+function pauseVid() {
+	console.log("Pause Video")
+}
+
 function pauseVid() {
 	console.log("Pause Video");
 	video.pause();
+}
+
+document.querySelector("#slower").addEventListener("click", slowerSpeed)
+function slowerSpeed() {
+	console.log("Speed is " + video.playbackRate)
 }
 
 function slowerSpeed() {
@@ -28,10 +35,20 @@ function slowerSpeed() {
 	console.log("Speed is " + video.playbackRate);
 } 
 
+document.querySelector("#faster").addEventListener("click", fasterSpeed)
+function fasterSpeed() {
+	console.log("Speed is " + video.playbackRate)
+}
+
 function fasterSpeed() {
 	video.playbackRate = video.playbackRate * 1.1111
 	console.log("Speed is " + video.playbackRate);
 } 
+
+document.querySelector("#skip").addEventListener("click", skipAhead)
+function skipAhead() {
+	console.log("Current location is " + video.currentTime)
+}
 
 function skipAhead() {
 	// skip 10 seconds
@@ -46,6 +63,10 @@ function skipAhead() {
 	console.log("Current location is " + video.currentTime);
 }
 
+document.querySelector("#mute").addEventListener("click", mute)
+function mute() {
+}
+
 function mute() { 
 	if (video.muted) {
 		video.muted = false;
@@ -55,6 +76,10 @@ function mute() {
 		video.muted = true;
 		console.log("Muted");
 	}
+}
+
+document.querySelector("#slider").addEventListener("click", changeVolume)
+function changeVolume() {
 }
 
 function changeVolume() {
@@ -68,9 +93,17 @@ function changeVolume() {
 	document.querySelector('#volume').innerHTML = slider_val + '%';
 }
 
+document.querySelector("#vintage").addEventListener("click", styled)
+function styled() {
+}
+
 function styled() { 
 	video.classList.add("oldSchool");
 	console.log("In grayscale");
+}
+
+document.querySelector("#orig").addEventListener("click", original)
+function original() {
 }
 
 function original() {
