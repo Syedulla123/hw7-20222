@@ -70,11 +70,13 @@ function mute() {
 function mute() {
 	if (video.muted) {
 		video.muted = false;
-		console.log("Unmuted");
+		console.log("Unmute");
+		document.querySelector("#mute").innerHTML = "Mute"
 	}
 	else {
 		video.muted = true;
-		console.log("Muted");
+		console.log("Mute");
+		document.querySelector("#mute").innerHTML = "Unmute"
 	}
 }
 
