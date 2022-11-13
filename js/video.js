@@ -1,4 +1,4 @@
-var video;
+var video = document.getElementById("player1");
 
 window.addEventListener("load", function () {
 	console.log("Good job opening the window")
@@ -33,7 +33,7 @@ function slowerSpeed() {
 function slowerSpeed() {
 	video.playbackRate = video.playbackRate * 0.9;
 	console.log("Speed is " + video.playbackRate);
-} 
+}
 
 document.querySelector("#faster").addEventListener("click", fasterSpeed)
 function fasterSpeed() {
@@ -43,7 +43,7 @@ function fasterSpeed() {
 function fasterSpeed() {
 	video.playbackRate = video.playbackRate * 1.1111
 	console.log("Speed is " + video.playbackRate);
-} 
+}
 
 document.querySelector("#skip").addEventListener("click", skipAhead)
 function skipAhead() {
@@ -67,7 +67,7 @@ document.querySelector("#mute").addEventListener("click", mute)
 function mute() {
 }
 
-function mute() { 
+function mute() {
 	if (video.muted) {
 		video.muted = false;
 		console.log("Unmuted");
@@ -84,7 +84,7 @@ function changeVolume() {
 
 function changeVolume() {
 	console.log(slider.value);
-	var slider_val = document.querySelector('#volume').innerHTML; 
+	var slider_val = document.querySelector('#volume').innerHTML;
 	// update the slider value
 	slider_val = slider.value;
 	// update the new video volume 
@@ -97,7 +97,7 @@ document.querySelector("#vintage").addEventListener("click", styled)
 function styled() {
 }
 
-function styled() { 
+function styled() {
 	video.classList.add("oldSchool");
 	console.log("In grayscale");
 }
